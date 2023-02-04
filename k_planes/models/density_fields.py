@@ -8,8 +8,8 @@ import torch
 import torch.nn as nn
 import tinycudann as tcnn
 
-from plenoxels.models.kplane_field import interpolate_ms_features, normalize_aabb, init_grid_param
-from plenoxels.raymarching.spatial_distortions import SpatialDistortion
+from k_planes.models.kplane_field import interpolate_ms_features, normalize_aabb, init_grid_param
+from k_planes.raymarching.spatial_distortions import SpatialDistortion
 
 
 class KPlaneDensityField(nn.Module):

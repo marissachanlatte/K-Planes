@@ -10,10 +10,10 @@ import numpy as np
 import pandas as pd
 import torch
 
-from plenoxels.datasets.base_dataset import BaseDataset
-from plenoxels.datasets.intrinsics import Intrinsics
-from plenoxels.datasets.ray_utils import average_poses
-from plenoxels.ops.image.io import read_png
+from k_planes.datasets.base_dataset import BaseDataset
+from k_planes.datasets.intrinsics import Intrinsics
+from k_planes.datasets.ray_utils import average_poses
+from k_planes.ops.image.io import read_png
 
 
 class PhototourismScenes(Enum):

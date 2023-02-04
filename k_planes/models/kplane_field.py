@@ -6,8 +6,8 @@ import torch
 import torch.nn as nn
 import tinycudann as tcnn
 
-from plenoxels.ops.interpolation import grid_sample_wrapper
-from plenoxels.raymarching.spatial_distortions import SpatialDistortion
+from k_planes.ops.interpolation import grid_sample_wrapper
+from k_planes.raymarching.spatial_distortions import SpatialDistortion
 
 
 def get_normalized_directions(directions):

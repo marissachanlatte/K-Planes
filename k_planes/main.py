@@ -29,11 +29,11 @@ else:
 
 import torch
 import torch.utils.data
-from plenoxels.runners import video_trainer
-from plenoxels.runners import phototourism_trainer
-from plenoxels.runners import static_trainer
-from plenoxels.utils.create_rendering import render_to_path, decompose_space_time
-from plenoxels.utils.parse_args import parse_optfloat
+from k_planes.runners import video_trainer
+from k_planes.runners import phototourism_trainer
+from k_planes.runners import static_trainer
+from k_planes.utils.create_rendering import render_to_path, decompose_space_time
+from k_planes.utils.parse_args import parse_optfloat
 
 
 def setup_logging(log_level=logging.INFO):
@@ -64,13 +64,13 @@ def load_data(model_type: str, data_downsample, data_dirs, validate_only: bool, 
 
 def init_trainer(model_type: str, **kwargs):
     if model_type == "video":
-        from plenoxels.runners import video_trainer
+        from k_planes.runners import video_trainer
         return video_trainer.VideoTrainer(**kwargs)
     elif model_type == "phototourism":
-        from plenoxels.runners import phototourism_trainer
+        from k_planes.runners import phototourism_trainer
         return phototourism_trainer.PhototourismTrainer(**kwargs)
     else:
-        from plenoxels.runners import static_trainer
+        from k_planes.runners import static_trainer
         return static_trainer.StaticTrainer(**kwargs)
 
 
@@ -112,7 +112,7 @@ def main():
     config: Dict[str, Any] = cfg.config
     # Process overrides from argparse into config
     # overrides can be passed from the command line as key=value pairs. E.g.
-    # python plenoxels/main.py --config-path plenoxels/config/cfg.py max_ts_frames=200
+    # python k_planes/main.py --config-path k_planes/config/cfg.py max_ts_frames=200
     # note that all values are strings, so code should assume incorrect data-types for anything
     # that's derived from config - and should not a string.
     overrides: List[str] = args.override

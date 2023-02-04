@@ -5,11 +5,11 @@ from typing import Union
 
 import torch
 
-from plenoxels.models.lowrank_model import LowrankModel
-from plenoxels.utils.my_tqdm import tqdm
-from plenoxels.ops.image.io import write_video_to_file
-from plenoxels.runners.static_trainer import StaticTrainer
-from plenoxels.runners.video_trainer import VideoTrainer
+from k_planes.models.lowrank_model import LowrankModel
+from k_planes.utils.my_tqdm import tqdm
+from k_planes.ops.image.io import write_video_to_file
+from k_planes.runners.static_trainer import StaticTrainer
+from k_planes.runners.video_trainer import VideoTrainer
 
 
 @torch.no_grad()

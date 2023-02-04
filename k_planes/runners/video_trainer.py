@@ -8,12 +8,12 @@ import pandas as pd
 import torch
 import torch.utils.data
 
-from plenoxels.datasets.video_datasets import Video360Dataset
-from plenoxels.utils.ema import EMA
-from plenoxels.utils.my_tqdm import tqdm
-from plenoxels.ops.image import metrics
-from plenoxels.ops.image.io import write_video_to_file
-from plenoxels.models.lowrank_model import LowrankModel
+from k_planes.datasets.video_datasets import Video360Dataset
+from k_planes.utils.ema import EMA
+from k_planes.utils.my_tqdm import tqdm
+from k_planes.ops.image import metrics
+from k_planes.ops.image.io import write_video_to_file
+from k_planes.models.lowrank_model import LowrankModel
 from .base_trainer import BaseTrainer, init_dloader_random, initialize_model
 from .regularization import (
     PlaneTV, TimeSmoothness, HistogramLoss, L1TimePlanes, DistortionLoss

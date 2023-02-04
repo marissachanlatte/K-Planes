@@ -11,14 +11,14 @@ import torch
 import torch.utils.data
 from torch.utils.tensorboard import SummaryWriter
 
-from plenoxels.utils.timer import CudaTimer
-from plenoxels.utils.ema import EMA
-from plenoxels.models.lowrank_model import LowrankModel
-from plenoxels.utils.my_tqdm import tqdm
-from plenoxels.ops.image import metrics
-from plenoxels.ops.image.io import write_png
-from plenoxels.runners.regularization import Regularizer
-from plenoxels.ops.lr_scheduling import (
+from k_planes.utils.timer import CudaTimer
+from k_planes.utils.ema import EMA
+from k_planes.models.lowrank_model import LowrankModel
+from k_planes.utils.my_tqdm import tqdm
+from k_planes.ops.image import metrics
+from k_planes.ops.image.io import write_png
+from k_planes.runners.regularization import Regularizer
+from k_planes.ops.lr_scheduling import (
     get_cosine_schedule_with_warmup, get_step_schedule_with_warmup
 )
 

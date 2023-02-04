@@ -8,9 +8,9 @@ import torch
 import torch.optim.lr_scheduler
 from torch import nn
 
-from plenoxels.models.lowrank_model import LowrankModel
-from plenoxels.ops.losses.histogram_loss import interlevel_loss
-from plenoxels.raymarching.ray_samplers import RaySamples
+from k_planes.models.lowrank_model import LowrankModel
+from k_planes.ops.losses.histogram_loss import interlevel_loss
+from k_planes.raymarching.ray_samplers import RaySamples
 
 
 def compute_plane_tv(t):

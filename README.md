@@ -21,7 +21,7 @@ We recommend setup with a conda environment using PyTorch for GPU (a high-memory
 
 Our config files are provided in the `configs` directory, organized by dataset and explicit vs. hybrid model version. These config files may be updated with the location of the downloaded data and your desired scene name and experiment name. To train a model, run
 ```
-PYTHONPATH='.' python plenoxels/main.py --config-path path/to/config.py
+PYTHONPATH='.' python k_planes/main.py --config-path path/to/config.py
 ```
 
 Note that for DyNeRF scenes it is recommended to first run for a single iteration at 4x downsampling to pre-compute and store the ray importance weights, and then run as usual at 2x downsampling. This is not required for other datasets.

@@ -7,11 +7,11 @@ import pandas as pd
 import torch
 import torch.utils.data
 
-from plenoxels.datasets import SyntheticNerfDataset, LLFFDataset
-from plenoxels.models.lowrank_model import LowrankModel
-from plenoxels.utils.ema import EMA
-from plenoxels.utils.my_tqdm import tqdm
-from plenoxels.utils.parse_args import parse_optint
+from k_planes.datasets import SyntheticNerfDataset, LLFFDataset
+from k_planes.models.lowrank_model import LowrankModel
+from k_planes.utils.ema import EMA
+from k_planes.utils.my_tqdm import tqdm
+from k_planes.utils.parse_args import parse_optint
 from .base_trainer import BaseTrainer, init_dloader_random, initialize_model
 from .regularization import (
     PlaneTV, HistogramLoss, L1ProposalNetwork, DepthTV, DistortionLoss,

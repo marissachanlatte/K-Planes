@@ -4,15 +4,15 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from plenoxels.models.density_fields import KPlaneDensityField
-from plenoxels.models.kplane_field import KPlaneField
-from plenoxels.ops.activations import init_density_activation
-from plenoxels.raymarching.ray_samplers import (
+from k_planes.models.density_fields import KPlaneDensityField
+from k_planes.models.kplane_field import KPlaneField
+from k_planes.ops.activations import init_density_activation
+from k_planes.raymarching.ray_samplers import (
     UniformLinDispPiecewiseSampler, UniformSampler,
     ProposalNetworkSampler, RayBundle, RaySamples
 )
-from plenoxels.raymarching.spatial_distortions import SceneContraction, SpatialDistortion
-from plenoxels.utils.timer import CudaTimer
+from k_planes.raymarching.spatial_distortions import SceneContraction, SpatialDistortion
+from k_planes.utils.timer import CudaTimer
 
 
 class LowrankModel(nn.Module):
