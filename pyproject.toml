@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "k-planes"
+version = "0.1.0"
+description = "Explicit Radiance Fields in Space, Time, and Appearance"
+authors = ["Sara Fridovich-Keil and Frederik Warburg"]
+license = "BSD 3"
+readme = "README.md"
+packages = [{include = "k_planes"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+tqdm = "^4.64.1"
+torch = "^1.13.1"
+pillow = "^9.4.0"
+opencv-python = "^4.7.0.68"
+pandas = "^1.5.3"
+lpips = "^0.1.4"
+imageio = "^2.25.0"
+torchmetrics = "^0.11.1"
+scikit-image = "^0.19.3"
+tinycudann = { git = "https://github.com/NVlabs/tiny-cuda-nn.git", subdirectory = "bindings/torch" }
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
