@@ -10,7 +10,7 @@ packages = [{include = "k_planes"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 tqdm = "^4.64.1"
-torch = "^1.13.1"
+torch = "^1.9.0"
 pillow = "^9.4.0"
 opencv-python = "^4.7.0.68"
 pandas = "^1.5.3"
